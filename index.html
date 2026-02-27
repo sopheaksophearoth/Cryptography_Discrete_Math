@@ -750,6 +750,7 @@
                     <span class="team-member">Ourn Prospov</span>
                     <span class="team-member">Seng Visal</span>
                     <span class="team-member">Lim Sopheanarith</span>
+                    <span class="team-member">An Sreypov</span>
                 </div>
             </div>
         </div>
@@ -808,7 +809,7 @@
                                     </div>
 
                                     <div class="video-container">
-                                        <div class="video-placeholder" onclick="loadVideo(this, 'https://www.youtube.com/embed/sXo3f6d5_3o')">
+                                        <div class="video-placeholder" onclick="loadVideo(this, 'https://www.youtube.com/embed/tvZ5O3RJfCQ')">
                                             <div class="play-button"></div>
                                             <p>Click to play: Caesar Cipher Explanation</p>
                                         </div>
@@ -854,7 +855,7 @@
                                     </div>
 
                                     <div class="video-container">
-                                        <div class="video-placeholder" onclick="loadVideo(this, 'https://www.youtube.com/embed/JtbKh_12ctg')">
+                                        <div class="video-placeholder" onclick="loadVideo(this, 'https://www.youtube.com/embed/4dbc3oEvyfc')">
                                             <div class="play-button"></div>
                                             <p>Click to play: Shift Cipher & Modular Arithmetic</p>
                                         </div>
@@ -904,7 +905,7 @@
                                     </div>
 
                                     <div class="video-container">
-                                        <div class="video-placeholder" onclick="loadVideo(this, 'https://www.youtube.com/embed/g8RmT3W9XxU')">
+                                        <div class="video-placeholder" onclick="loadVideo(this, 'https://www.youtube.com/embed/iyESl17IqFQ')">
                                             <div class="play-button"></div>
                                             <p>Click to play: Affine Cipher Tutorial</p>
                                         </div>
@@ -957,7 +958,7 @@
                                     </div>
 
                                     <div class="video-container">
-                                        <div class="video-placeholder" onclick="loadVideo(this, 'https://www.youtube.com/embed/8oI8LJ1eRRQ')">
+                                        <div class="video-placeholder" onclick="loadVideo(this, 'https://www.youtube.com/embed/6OtKgLtZlgg')">
                                             <div class="play-button"></div>
                                             <p>Click to play: Transposition Cipher Explained</p>
                                         </div>
@@ -1013,7 +1014,7 @@
                         </div>
 
                         <div class="video-container">
-                            <div class="video-placeholder" onclick="loadVideo(this, 'https://www.youtube.com/embed/4zahvcJ9glg')">
+                            <div class="video-placeholder" onclick="loadVideo(this, 'https://www.youtube.com/embed/wcbH4t5SJpg')">
                                 <div class="play-button"></div>
                                 <p>Click to play: RSA Algorithm Explained</p>
                             </div>
@@ -1110,7 +1111,7 @@
                         </div>
 
                         <div class="video-container">
-                            <div class="video-placeholder" onclick="loadVideo(this, 'https://www.youtube.com/embed/SkJcmCaHqS0')">
+                            <div class="video-placeholder" onclick="loadVideo(this, 'https://www.youtube.com/embed/Ic4BzVggNY8')">
                                 <div class="play-button"></div>
                                 <p>Click to play: Vigenère Cipher Tutorial</p>
                             </div>
@@ -1181,6 +1182,7 @@
                     <li>Ourn Prospov</li>
                     <li>Seng Visal</li>
                     <li>Lim Sopheanarith</li>
+                    <li>An Sreypov</li>
                 </ul>
             </div>
         </div>
@@ -1214,7 +1216,9 @@
         // Load YouTube video
         function loadVideo(element, videoUrl) {
             const container = element.parentElement;
-            container.innerHTML = `<iframe src="${videoUrl}" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>`;
+            const separator = videoUrl.includes('?') ? '&' : '?';
+            const autoplayUrl = `${videoUrl}${separator}autoplay=1`;
+            container.innerHTML = `<iframe src="${autoplayUrl}" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>`;
         }
 
         // Utility functions
